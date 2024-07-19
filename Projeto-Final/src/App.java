@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         double[] salariosBrutos = new double[5];
         for (int i = 0; i < 5; i++) {
@@ -32,17 +32,14 @@ public class App {
             inss = salarioBruto * 0.09;
         } else if (salarioBruto <= 3641.03) {
             inss =salarioBruto * 0.12;
-        } else if (salarioBruto <= 7087.22) {
-            inss = salarioBruto * 0.14;
         } else {
-            inss = 0;
+            inss = salarioBruto * 0.14;
         }
         return inss;
     }
     
     public static double calcularImpostoDeRenda(double salarioBase) {
         double impostoDeRenda = 0.0;
-        
         if (salarioBase <= 1903.98) {
             impostoDeRenda = 0.0;
         } else if (salarioBase <= 2826.65) {
@@ -50,7 +47,7 @@ public class App {
         } else if (salarioBase <= 3751.05) {
             impostoDeRenda = salarioBase * 0.15;
         } else if (salarioBase <= 4664.68) {
-            impostoDeRenda =salarioBase * 0.225;
+            impostoDeRenda = salarioBase * 0.225;
         } else {
             impostoDeRenda = salarioBase * 0.275;
         }
